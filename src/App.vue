@@ -14,26 +14,6 @@
 </template>
 
 <script>
-import { onAuthUIStateChange } from '@aws-amplify/ui-components'
-
-export default {
-  name: 'AuthStateApp',
-  created() {
-    onAuthUIStateChange((authState, authData) => {
-      this.authState = authState;
-      this.user = authData;
-    })
-  },
-  data() {
-    return {
-      user: undefined,
-      authState: undefined
-    }
-  },
-  beforeDestroy() {
-    return onAuthUIStateChange;
-  }
-}
 
 import HelloWorld from "./components/HelloWorld.vue";
 
