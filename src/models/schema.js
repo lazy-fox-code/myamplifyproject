@@ -1,7 +1,7 @@
 export const schema = {
     "models": {
-        "Products": {
-            "name": "Products",
+        "Todo": {
+            "name": "Todo",
             "fields": {
                 "id": {
                     "name": "id",
@@ -23,24 +23,10 @@ export const schema = {
                     "type": "String",
                     "isRequired": false,
                     "attributes": []
-                },
-                "value": {
-                    "name": "value",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "datetime": {
-                    "name": "datetime",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": []
                 }
             },
             "syncable": true,
-            "pluralName": "Products",
+            "pluralName": "Todos",
             "attributes": [
                 {
                     "type": "model",
@@ -51,7 +37,7 @@ export const schema = {
                     "properties": {
                         "rules": [
                             {
-                                "allow": "public",
+                                "allow": "private",
                                 "operations": [
                                     "create",
                                     "update",
@@ -67,5 +53,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "6dd23d7cd17cc3b4ebe2dd8aacae4b56"
+    "version": "d56528714da04741e0b1864a4666658a"
 };
