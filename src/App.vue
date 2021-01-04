@@ -1,16 +1,15 @@
 <template>
   <div id="app">
-    <div v-if="authState !== 'signedin'">You are signed out.</div>
     <amplify-authenticator>
-      <div v-if="authState === 'signedin' && user">
-        <div>Hello, {{user.username}}</div>
+      <amplify-sign-in header-text="My Custom Sign In Text" slot="sign-in"></amplify-sign-in>
+      <div>
+        <img alt="Vue logo" src="./assets/logo.png" />
+        <HelloWorld msg="Welcome to Your Vue.js App" />
+        <div id="amplify-signout">
+          <amplify-sign-out></amplify-sign-out>
+        </div>
       </div>
-      <amplify-sign-out></amplify-sign-out>
     </amplify-authenticator>
-
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    My App
   </div>
 </template>
 
@@ -36,14 +35,14 @@ export default {
   }
 }
 
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     HelloWorld
   }
-}
+};
 </script>
 
 <style>
@@ -54,5 +53,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+#amplify-signout {
+  width: 100px;
+  margin: 0 auto;
 }
 </style>
